@@ -49,7 +49,7 @@ const patient__posts = {
 const Bar = ()=>{
   return(
     <div className="sidebar">
-      <div>
+      <div className="linkbar">
         <Link to="/" className="sidebar__logo">
           <p className="sidebar__logo-text" >Логотип</p>
         </Link>
@@ -73,10 +73,10 @@ const Bar = ()=>{
           <img className="sidebar__item-img" src={book} alt="heart" />
           <p className="sidebar__item-text" >Полезно знать</p>
         </Link>
+        <Link to="/" className="sidebar__button">
+          <p to="/" className="sidebar__button-text">Подать заявку</p>
+        </Link>
       </div>
-      <Link to="/" className="sidebar__button">
-        <p to="/" className="sidebar__button-text">Подать заявку</p>
-      </Link>
       <div className="sidebar__footer">
         <Link to="/" className="sidebar__item sidebar__footer-item">
           <img className="sidebar__item-img" src={help} alt="help" />
@@ -169,12 +169,12 @@ const Content = ()=>{
         </div>
         <div className="content__cards">
           <div className="content__row">
-            <Link to="/" className="content__row-item--active">
-              <img src={report} alt="report" className="content__item-img--active" />
+            <Link to="/" className="content__row-item">
+              <img src={report} alt="report" className="content__item-img" />
               <div className="content__box">
                 <div className="content__box-container">
                   <h1 className="content__box-title">Информация о пациенте</h1>
-                  <hr className="content__box-hr--active" />
+                  <hr className="content__box-hr" />
                 </div>
                 <ul className="content__box-list --active">
                   <li>Ваши личные данные</li>
@@ -447,7 +447,6 @@ const Days = ()=>{
 }
 
 const Doctors = ()=>{
-  
   return(
     <div className="doctors">
       <div className="doctors__label">
