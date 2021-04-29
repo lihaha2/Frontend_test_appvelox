@@ -1,13 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './css/App.css'
 import {Switch, Route, Link} from 'react-router-dom'
-import heart from './img/heart1.svg';
-import book from './img/book1.svg';
-import speak from './img/speak1.svg';
-import test from './img/test1.svg';
-import vector from './img/vector.svg';
-import logo from './img/logo.png';
-import help from './img/help1.svg';
+//images
+import heart from './img/heart1.svg'
+import book from './img/book1.svg'
+import speak from './img/speak1.svg'
+import test from './img/test1.svg'
+import vector from './img/vector.svg'
+import logo from './img/logo.png'
+import help from './img/help1.svg'
 import search from './img/search1.svg'
 import bell from './img/bell1.svg'
 import eye from './img/eye1.svg'
@@ -46,111 +47,105 @@ const patient__posts = {
   }
 }
 
-const Bar = ()=>{
-  return(
-    <div className="sidebar">
-      <div className="linkbar">
-        <Link to="/" className="sidebar__logo">
-          <p className="sidebar__logo-text" >Логотип</p>
-        </Link>
-        <Link to="/" className="sidebar__item sidebar__item-active">
-          <img className="sidebar__item-img" src={heart} alt="heart" />
-          <p className="sidebar__item-text--active" >Профиль</p>
-        </Link>
-        <Link to="/" className="sidebar__item">
-          <img className="sidebar__item-img" src={vector} alt="heart" />
-          <p className="sidebar__item-text" >Врачи и клиники</p>
-        </Link>
-        <Link to="/" className="sidebar__item">
-          <img className="sidebar__item-img" src={speak} alt="heart" />
-          <p className="sidebar__item-text" >Сообщения</p>
-        </Link>
-        <Link to="/" className="sidebar__item">
-          <img className="sidebar__item-img" src={test} alt="heart" />
-          <p className="sidebar__item-text" >Тестирование</p>
-        </Link>
-        <Link to="/" className="sidebar__item">
-          <img className="sidebar__item-img" src={book} alt="heart" />
-          <p className="sidebar__item-text" >Полезно знать</p>
-        </Link>
-        <Link to="/" className="sidebar__button">
-          <p to="/" className="sidebar__button-text">Подать заявку</p>
-        </Link>
-      </div>
-      <div className="sidebar__footer">
-        <Link to="/" className="sidebar__item sidebar__footer-item">
-          <img className="sidebar__item-img" src={help} alt="help" />
-          <p className="sidebar__item-text">Помощь</p>
-        </Link>
-        <Link to="/">
-          <img src={logo} className="sidebar__footer-logo" alt="logo" />
-        </Link>
-      </div>
+const Bar = ()=>(
+  <div className="sidebar">
+    <div className="linkbar">
+      <Link to="/" className="sidebar__logo">
+        <p className="sidebar__logo-text" >Логотип</p>
+      </Link>
+      <Link to="/" className="sidebar__item sidebar__item-active">
+        <img className="sidebar__item-img" src={heart} alt="heart" />
+        <p className="sidebar__item-text--active" >Профиль</p>
+      </Link>
+      <Link to="/" className="sidebar__item">
+        <img className="sidebar__item-img" src={vector} alt="heart" />
+        <p className="sidebar__item-text" >Врачи и клиники</p>
+      </Link>
+      <Link to="/" className="sidebar__item">
+        <img className="sidebar__item-img" src={speak} alt="heart" />
+        <p className="sidebar__item-text" >Сообщения</p>
+      </Link>
+      <Link to="/" className="sidebar__item">
+        <img className="sidebar__item-img" src={test} alt="heart" />
+        <p className="sidebar__item-text" >Тестирование</p>
+      </Link>
+      <Link to="/" className="sidebar__item">
+        <img className="sidebar__item-img" src={book} alt="heart" />
+        <p className="sidebar__item-text" >Полезно знать</p>
+      </Link>
+      <Link to="/" className="sidebar__button">
+        <p to="/" className="sidebar__button-text">Подать заявку</p>
+      </Link>
     </div>
-  )
-}
-
-const Header = ()=>{
-  return(
-    <div className="header">
-      <div className="header__title">
-        Мой профиль
-      </div>
-      <div className="header__links">
-        <Link to="/" className="header__links-link"><img className="header__links-img" src={search} alt="search" /></Link>
-        <Link to="/" className="header__links-link"><img className="header__links-img" src={bell} alt="bell" /></Link>
-        <Link to="/" className="header__links-link"><img className="header__links-img" src={eye} alt="eye" /></Link>
-        <Link to="/" className="header__profile-link"><img className="header__profile-img" src={patient.icon} alt={patient.name} /></Link>
-        <Link to="/" className="header__links-link"><img className="header__links-img" src={arrow} alt="arrow" /></Link>
-      </div>
+    <div className="sidebar__footer">
+      <Link to="/" className="sidebar__item sidebar__footer-item">
+        <img className="sidebar__item-img" src={help} alt="help" />
+        <p className="sidebar__item-text">Помощь</p>
+      </Link>
+      <Link to="/">
+        <img src={logo} className="sidebar__footer-logo" alt="logo" />
+      </Link>
     </div>
-  )
-}
+  </div>
+)
 
-const Posts = ()=>{
-    return(
-      <div className="content__items">
-        <div className="content__item">
-          <div className="content__item-title">
-            {patient__posts[0].time}
-          </div>
-          <div className="content__item-text">
-          {patient__posts[0].where}
-          </div>
-          <div className="content__profile">
-            <img src={doc1} alt="doctor" className="content__profile-img" />
-            <div className="content__profile-data">
-              <p className="content__profile-name">
-                {patient__posts[0].who}
-              </p>
-              <p className="content__profile-special">
-              {patient__posts[0].special}
-              </p>
-            </div>
-          </div>
-          <Link to="/" className="content__item-button">Отменить</Link>
-        </div>
-        <div className="content__item">
+const Header = ()=>(
+  <div className="header">
+    <div className="header__title">
+      Мой профиль
+    </div>
+    <div className="header__links">
+      <Link to="/" className="header__links-link"><img className="header__links-img" src={search} alt="search" /></Link>
+      <Link to="/" className="header__links-link"><img className="header__links-img" src={bell} alt="bell" /></Link>
+      <Link to="/" className="header__links-link"><img className="header__links-img" src={eye} alt="eye" /></Link>
+      <Link to="/" className="header__profile-link"><img className="header__profile-img" src={patient.icon} alt={patient.name} /></Link>
+      <Link to="/" className="header__links-link"><img className="header__links-img" src={arrow} alt="arrow" /></Link>
+    </div>
+  </div>
+)
+
+const Content = ()=>{
+  const Posts = ()=>(
+    <div className="content__items">
+      <div className="content__item">
         <div className="content__item-title">
-        {patient__posts[1].time} 
+          {patient__posts[0].time}
         </div>
         <div className="content__item-text">
-        {patient__posts[1].where}
+        {patient__posts[0].where}
         </div>
         <div className="content__profile">
-          <img src={doc2} alt="doctor" className="content__profile-img" />
+          <img src={doc1} alt="doctor" className="content__profile-img" />
           <div className="content__profile-data">
-            <p className="content__profile-name">{patient__posts[1].who}</p>
-            <p className="content__profile-special">{patient__posts[1].special}</p>
+            <p className="content__profile-name">
+              {patient__posts[0].who}
+            </p>
+            <p className="content__profile-special">
+            {patient__posts[0].special}
+            </p>
           </div>
         </div>
         <Link to="/" className="content__item-button">Отменить</Link>
+      </div>
+      <div className="content__item">
+      <div className="content__item-title">
+      {patient__posts[1].time} 
+      </div>
+      <div className="content__item-text">
+      {patient__posts[1].where}
+      </div>
+      <div className="content__profile">
+        <img src={doc2} alt="doctor" className="content__profile-img" />
+        <div className="content__profile-data">
+          <p className="content__profile-name">{patient__posts[1].who}</p>
+          <p className="content__profile-special">{patient__posts[1].special}</p>
         </div>
       </div>
-    )
-}
+      <Link to="/" className="content__item-button">Отменить</Link>
+      </div>
+    </div>
+  )
 
-const Content = ()=>{
   return(
     <div className="content">
       <div className="content__label">
@@ -168,7 +163,6 @@ const Content = ()=>{
           Электронная карта
         </div>
         <div className="content__cards">
-          <div className="content__row">
             <Link to="/" className="content__row-item">
               <img src={report} alt="report" className="content__item-img" />
               <div className="content__box">
@@ -193,8 +187,6 @@ const Content = ()=>{
                 <p className="content__box-text">Вы можете узнать здесь результаты своих анализов</p>
               </div>
             </Link>
-          </div>
-          <div className="content__row">
             <Link to="/" className="content__row-item">
               <img src={add} alt="lab" className="content__item-img" />
               <div className="content__box">
@@ -215,15 +207,14 @@ const Content = ()=>{
                 <p className="content__box-text">Вся информация о полученных услугах за все время хранится здесь</p>
               </div>
             </Link>
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-const FullDoctorsList = ()=>{
-  return(
+const Doctors = ()=>{
+  const FullDoctorsList = ()=>(
     <div className="doctors__posts">
       <div className="content__item posts__margin">
         <div className="content__item-title">
@@ -407,10 +398,8 @@ const FullDoctorsList = ()=>{
       </div>
     </div>
   )
-}
-
-const Days = ()=>{
-  return(
+  
+  const Days = ()=>(
     <div className="calendar__body">
       <div className="calendar__days--used"><p className="calendar__days-text--used">1</p></div>
       <div className="calendar__days--used"><p className="calendar__days-text--used">2</p></div>
@@ -444,9 +433,7 @@ const Days = ()=>{
       <div className="calendar__days"><p className="calendar__days-text">30</p><p className="calendar__days-event">1</p></div>
     </div>
   )
-}
 
-const Doctors = ()=>{
   return(
     <div className="doctors">
       <div className="doctors__label">
@@ -480,26 +467,21 @@ const Doctors = ()=>{
   )
 }
 
-const Main = ()=>{
-  return(
-    <Switch>
-      <Route exact path='/' component={Content}/>
-      <Route path='/doctors' component={Doctors}/>
-    </Switch>
-  )
+const Main = ()=>(
+  <Switch>
+    <Route exact path='/' component={Content}/>
+    <Route path='/doctors' component={Doctors}/>
+  </Switch>
+)
 
-}
-
-const App = ()=>{
-  return (
-    <div className="App">
-      <Bar />
-      <div className="container">
-        <Header />
-        <Main />
-      </div>
+const App = ()=>(
+  <div className="App">
+    <Bar />
+    <div className="container">
+      <Header />
+      <Main />
     </div>
-  );
-}
+  </div>
+)
 
-export default App;
+export default App
